@@ -15,21 +15,6 @@ document.getElementById('max').addEventListener('click', function() {
 });
 
 
-function min(array) {
-  let minimum = array[0];
-  for (i = 1; i < array.length; i++) {
-      if (minimum > array[i]) {
-          minimum = array[i];
-      }
-  }
-  return minimum;
-}
-document.getElementById('min').addEventListener('click', function() {
-  const input = document.getElementById('Prog1').value;
-  const array = input.split(',').map(Number); // Преобразуем строку в массив чисел
-  const minimumValue = min(array);
-  document.getElementById('result').textContent = 'Минимальное значение: ' + minimumValue;
-});
 
 
 
@@ -108,5 +93,5 @@ document.getElementById('razmah').addEventListener('click', function() {
   const input = document.getElementById('Prog1').value;
   const array = input.split(',').map(Number); // Преобразуем строку в массив чисел
   const razValue = RazMax(array);
-  document.getElementById('result').textContent = 'Медиана: ' + razValue;
+  document.getElementById('result').textContent = 'Размах: ' + razValue;
 });
