@@ -97,7 +97,62 @@ document.getElementById('razmah').addEventListener('click', function() {
 });
 
 
+document.getElementById('mody').addEventListener('click', function() { 
+  const input = document.getElementById('Prog1').value; 
+  const numbers = input.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num)); 
+  
+  if (numbers.length === 0) { 
+  document.getElementById('result').innerText = 'Введите корректные числа.'; 
+  return; 
+  } 
+  
+  const frequency = {}; 
+  let maxCount = 0; 
+  let mode = null; 
+  
+  // Подсчет частоты каждого числа 
+  numbers.forEach(num => { 
+  frequency[num] = (frequency[num] || 0) + 1; 
+  if (frequency[num] > maxCount) { 
+  maxCount = frequency[num]; 
+  mode = num; 
+  } 
+  }); 
+  
+  if (maxCount > 1) { 
+  document.getElementById('result').textContent = `Мода: ${mode} (встречается ${maxCount} раз)`; 
+  } else { 
+  document.getElementById('result').textContent = 'Моды нет (все числа встречаются одинаково)'; 
+  } 
+  });
 
+
+  function dis(array) { 
+    let sum = 0; 
+    let n = 0; 
+    let sred = 0; 
+    let SUM = 0; 
+    let N; 
+    for (i = 0; i < array.length; i++) { 
+    sum=sum+array[i]; 
+    n=n+1; 
+    } 
+    N=n; 
+    sred=sum/n; 
+    for (j = 0; j < array.length; j++) { 
+    SUM += Math.pow((array[j] - sred), 2); 
+    } 
+    
+    let S2=SUM/(N-1); 
+    return (S2); 
+   } 
+    
+   document.getElementById('dispersia').addEventListener('click', function() { 
+    const input = document.getElementById('Prog1').value; 
+    const array = input.split(',').map(Number); // Преобразуем строку в массив чисел 
+    const disValue = dis(array); 
+    document.getElementById('result').textContent = 'Дисперсия: ' + disValue; 
+   });
 
 
 
