@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Математическая статистика</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h2>Математическая статистика</h2>
+				</section>
+                <section class="center">
+					<h2>Определения</h2>
+				</section>
+				<section data-markdown="markdown/MatStat.md"></section>
+				<section data-markdown="markdown/vyborka.md"></section>
+				<section data-markdown="markdown/sred.md"></section>
+				<section data-markdown="markdown/mediana.md"></section>
+				<section data-markdown="markdown/mediana2.md"></section>
+				<section data-markdown="markdown/mody.md"></section>
+				<section data-markdown="markdown/minandmax.md"></section>
+				<section data-markdown="markdown/razmah.md"></section>
+				<section data-markdown="markdown/disper.md"></section>
+				<section data-markdown="markdown/disper1.md"></section>
+				<section data-markdown="markdown/disper3.md"></section>
+				<section data-markdown="markdown/disper2.md"></section>
+				<section data-markdown="markdown/disper4.md"></section>
+				<section data-markdown="markdown/normRaspr.md"></section>
+				<section data-markdown="markdown/matog.md"></section>
+				<section data-markdown="markdown/matog1.md"></section>
+				<section>
+					<h3>Программа</h3>
+					<div><input type="text" id="Prog1" placeholder="Введите числа через ," size="100px"></div>
+					<div>
+						<input type="button" value="Минимум" id="min">
+						<input type="button" value="Максимум" id="max">
+						<input type="button" value="Выборочная средняя" id="sred">
+						<input type="button" value="Медиана" id="mediana">
+						<!-- <input type="button" value="Мода" id="mody"> -->
+						<input type="button" value="Размах" id="razmah">
+						<!-- //<input type="button" value="Дисперсия" id="dispersia"> -->
+					</div>
+					<div id="result" style="margin-top: 10px;"></div>
+				</section>
+				<section>
+					<h3>Весёлые картинки</h3>
+					<img src="пирожки.jpg" alt="400px">
+				</section>
+				<section>
+					<img src="повешание.webp" alt="400px">
+				</section>
+				<section>
+					<img src="радуга.webp" alt="400px">
+				</section>
+				<section class="center"
+				data-menu-title="Конечный слайд">
+					Конец!<br>
+					Спасибо за внимание!!!
+					
+				</section>
+			</div>
+		</div>
+
+        <script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+                center: false,
+				slideNumber: true,
+				controls: true,
+				dependencies: [
+					{
+						src: 'plugin/menu/menu.js'
+					},
+					{
+						src: 'plugin/fullscreen/fullscreen.js'
+					},
+					{
+						src: 'plugin/katex/katex.js',
+						async: true,
+					}
+				],
+				menu: {
+					numbers: true,
+					markers: true,
+				},
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="laba.js"></script>
+	</body>
+</html>
+
